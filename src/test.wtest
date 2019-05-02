@@ -1,0 +1,11 @@
+import camion.*
+import cosas.*
+
+
+test "peligrosidad" {
+
+	camion.cargar(knightRider)
+	assert.equals([knightRider], camion.objetosPeligrosos(7))
+	camion.cargar(bumblebee)
+
+}

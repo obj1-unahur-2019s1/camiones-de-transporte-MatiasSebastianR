@@ -10,3 +10,26 @@ object bumblebee {
 	method nivelPeligrosidad() { return if (transformadoEnAuto) { 15 } else { 30 }  }
 	method transformar() { transformadoEnAuto = not transformadoEnAuto }
 }
+
+object paqueteDeLadrillos {
+	var ladrillos = 0
+	
+	method cuantosLadrillos() {return ladrillos}
+	method sumandoLadrillos(cosa) { return ladrillos += cosa}
+	method peso() { return 2 * ladrillos }
+	method nivelPeligrosidad() { return 2 }
+	
+}
+
+object arenaAGranel {
+	var arena = 0
+	
+	method peso(){ return arena }
+	method nivelPeligrosidad() { return 1}
+	
+}
+
+object bateriaAntiaerea {
+	
+	
+}
