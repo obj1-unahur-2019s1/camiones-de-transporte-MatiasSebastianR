@@ -10,26 +10,28 @@ object bumblebee {
 	method nivelPeligrosidad() { return if (transformadoEnAuto) { 15 } else { 30 }  }
 	method transformar() { transformadoEnAuto = not transformadoEnAuto }
 }
+// para crear > new PaqueteLadrillos()
 
-object paqueteDeLadrillos {
-	var ladrillos = 0
+class PaqueteDeLadrillos {
+	var property cantidad = 0
+	const pesoUnitario = 2
 	
-	method cuantosLadrillos() {return ladrillos}
-	method sumandoLadrillos(cosa) { return ladrillos += cosa}
-	method peso() { return 2 * ladrillos }
+	method peso() { return cantidad * pesoUnitario }
 	method nivelPeligrosidad() { return 2 }
 	
 }
 
 object arenaAGranel {
-	var arena = 0
+	var property peso = 0
 	
-	method peso(){ return arena }
 	method nivelPeligrosidad() { return 1}
 	
 }
 
 object bateriaAntiaerea {
+	var property conMisiles = true
 	
-	
+	method peso() { return if (conMisiles) { 300 } else { 200 } }
+	method nivelPeligrosidad() { return if (conMisiles) { 100 } else { 0 } }
+		
 }
